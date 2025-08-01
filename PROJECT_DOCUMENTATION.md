@@ -96,6 +96,7 @@
 ├── styles/                      # Дополнительные стили
 ├── schema.sql                   # Схема базы данных
 ├── migration-multiplayer.sql    # Миграции для мультиплеера
+├── server.js                    # Сервер для разработки с WebSocket
 └── PROJECT_DOCUMENTATION.md     # Эта документация
 ```
 
@@ -252,12 +253,18 @@ SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
    - Выполните `schema.sql`
    - Выполните `migration-multiplayer.sql`
 
-2. **Настройка Vercel**:
+2. **Локальная разработка**:
+   ```bash
+   npm install
+   node server.js  # Запуск с WebSocket сервером
+   ```
+
+3. **Настройка Vercel**:
    - Подключите GitHub репозиторий
    - Добавьте переменные окружения
    - Разверните приложение
 
-3. **Проверка работоспособности**:
+4. **Проверка работоспособности**:
    - Тест API endpoints
    - Проверка WebSocket подключений
    - Тест административной панели
