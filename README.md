@@ -1,30 +1,114 @@
-# tictactoe
+# TicTacToe - Многопользовательская игра в крестики-нолики
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+## Описание проекта
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/sue1111s-projects/v0-simple-ad-platform)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/PmPFsUSuI1T)
+Это полнофункциональное веб-приложение для игры в крестики-нолики с поддержкой многопользовательской игры, административной панели и системой транзакций.
 
-## Overview
+## Основные возможности
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+### 🎮 Игровые функции
+- Многопользовательская игра в реальном времени
+- Игра против ИИ
+- Система лобби для поиска игроков
+- История игр и статистика
+- Система рейтинга и лидерборд
 
-## Deployment
+### 👨‍💼 Административная панель
+- Управление пользователями
+- Просмотр транзакций
+- Статистика игр
+- Система уведомлений
+- Настройки игры
 
-Your project is live at:
+### 💰 Финансовая система
+- Система депозитов и выводов
+- Управление балансом пользователей
+- История транзакций
+- Обработка запросов на вывод
 
-**[https://vercel.com/sue1111s-projects/v0-simple-ad-platform](https://vercel.com/sue1111s-projects/v0-simple-ad-platform)**
+## Технологический стек
 
-## Build your app
+- **Frontend**: Next.js 14, React, TypeScript
+- **Styling**: Tailwind CSS, shadcn/ui
+- **Backend**: Next.js API Routes
+- **Database**: Supabase (PostgreSQL)
+- **Real-time**: WebSocket для многопользовательской игры
+- **Authentication**: Supabase Auth
+- **Deployment**: Vercel
 
-Continue building your app on:
+## Структура проекта
 
-**[https://v0.dev/chat/projects/PmPFsUSuI1T](https://v0.dev/chat/projects/PmPFsUSuI1T)**
+```
+├── app/                    # Next.js App Router
+│   ├── admin/             # Административная панель
+│   ├── api/               # API endpoints
+│   └── login/             # Страница входа
+├── components/            # React компоненты
+│   ├── admin/            # Компоненты админки
+│   ├── ui/               # UI компоненты
+│   └── game/             # Игровые компоненты
+├── lib/                  # Утилиты и конфигурация
+├── hooks/                # React хуки
+└── public/               # Статические файлы
+```
 
-## How It Works
+## Установка и запуск
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+### Предварительные требования
+- Node.js 18+
+- npm или yarn
+- Supabase аккаунт
+
+### Установка зависимостей
+```bash
+npm install
+```
+
+### Настройка переменных окружения
+Создайте файл `.env.local` со следующими переменными:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+```
+
+### Запуск в режиме разработки
+```bash
+npm run dev
+```
+
+### Сборка для продакшена
+```bash
+npm run build
+npm start
+```
+
+## Развертывание
+
+Проект готов к развертыванию на Vercel:
+
+1. Подключите репозиторий к Vercel
+2. Настройте переменные окружения
+3. Разверните приложение
+
+## База данных
+
+Проект включает SQL скрипты для настройки базы данных:
+- `schema.sql` - основная схема базы данных
+- `migration-multiplayer.sql` - миграции для многопользовательской игры
+- `fix-*.sql` - скрипты для исправления данных
+
+## Документация
+
+- `PROJECT_DOCUMENTATION.md` - подробная документация проекта
+- `MULTIPLAYER_SETUP.md` - настройка многопользовательской игры
+- `BUGS_AND_IMPROVEMENTS.md` - известные проблемы и улучшения
+
+## Лицензия
+
+Этот проект создан для коммерческого использования.
+
+---
+
+**Разработчик**: Kyureno2374  
+**GitHub**: https://github.com/Kyureno2374/new-work
